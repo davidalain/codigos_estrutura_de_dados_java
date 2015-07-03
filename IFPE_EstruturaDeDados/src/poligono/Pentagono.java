@@ -1,3 +1,4 @@
+package poligono;
 
 public class Pentagono extends Poligono{
 	
