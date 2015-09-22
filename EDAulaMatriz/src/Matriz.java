@@ -12,7 +12,7 @@ public class Matriz {
 		int colunas;
 
 		System.out.println("Digite a quantidade de linhas:");
-		linhas = scanner.nextInt();
+		linhas = scanner.next().toCharArray()[0];
 		System.out.println("Digite a quantidade de colunas:");
 		colunas = scanner.nextInt();
 

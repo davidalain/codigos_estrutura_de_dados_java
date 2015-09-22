@@ -8,13 +8,15 @@ public class BuscaBinaria {
 		int inicio = 0;
 		int fim = array.length - 1;
 		int meio = (fim + inicio) / 2;
+		int comp;
 		
 		while(inicio < fim){
 			
-			if(array[meio].compareTo(chave) < 0){
+			comp = array[meio].compareTo(chave);
+			if(comp < 0){
 				inicio = meio + 1;
 
-			}else if(array[meio].compareTo(chave) > 0){
+			}else if(comp > 0){
 				fim = meio - 1;
 
 			}else{
@@ -38,15 +40,17 @@ public class BuscaBinaria {
 	private static Comparable buscaRecursiva(Comparable[] array, Comparable chave, int inicio, int fim){
 
 		int meio = (fim + inicio) / 2;
+		int comp;
 
 		if(inicio < fim){
 
-			if(array[meio].compareTo(chave) < 0){
+			comp = array[meio].compareTo(chave);
+			if(comp < 0){
 				inicio = meio + 1;
 				
 				return buscaRecursiva(array, chave, inicio, fim);
 
-			}else if(array[meio].compareTo(chave) > 0){
+			}else if(comp > 0){
 				fim = meio - 1;
 				
 				return buscaRecursiva(array, chave, inicio, fim);
