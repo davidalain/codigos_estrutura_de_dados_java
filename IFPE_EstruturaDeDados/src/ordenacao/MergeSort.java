@@ -1,4 +1,4 @@
-package algoritmosOrdenacao;
+package ordenacao;
 
 import java.util.Arrays;
 
@@ -11,11 +11,11 @@ public abstract class MergeSort {
 	public static void main(String[] args)
 	{
 		Integer[] a = {2, 6, 3, 5, 1, -1, 0};
-		ordenar(a);
+		sort(a);
 		System.out.println(Arrays.toString(a));
 	}
 
-	public static void ordenar(Comparable[] array)
+	public static void sort(Comparable[] array)
 	{
 		Comparable[] tmp = new Comparable[array.length];
 		separarParaOrdenar(array, tmp,  0,  array.length - 1);
