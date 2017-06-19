@@ -3,16 +3,16 @@ package arvore;
 import java.security.InvalidParameterException;
 import java.util.List;
 
-public class Tree<K,V> {
+public class TreeImplementation<K,V> {
 
 	private Node<K,V> root = null;
 
-	public Tree(){
+	public TreeImplementation(){
 		super();
 		root = null;
 	}
 
-	public Tree(K key, V value){
+	public TreeImplementation(K key, V value){
 		super();
 		root = new Node<K, V>(key, value, null);
 	}

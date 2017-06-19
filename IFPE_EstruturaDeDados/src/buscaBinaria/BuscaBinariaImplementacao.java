@@ -1,8 +1,8 @@
 package buscaBinaria;
 
-public class BuscaBinariaImplementacao{
-	
-	public static Comparable buscaIterativa(Comparable[] array, Comparable chave){
+public class BuscaBinariaImplementacao<T extends Comparable<T>> {
+
+	public T buscaIterativa(T[] array, T chave){
 
 		int inicio = 0;
 		int fim = array.length - 1;
@@ -32,11 +32,11 @@ public class BuscaBinariaImplementacao{
 
 	}
 	
-	public static Comparable buscaRecursiva(Comparable[] array, Comparable chave){
+	public T buscaRecursiva(T[] array, T chave){
 		return buscaRecursiva(array, chave, 0, array.length - 1);
 	}
 
-	private static Comparable buscaRecursiva(Comparable[] array, Comparable chave, int inicio, int fim){
+	private T buscaRecursiva(T[] array, T chave, int inicio, int fim){
 
 		int meio = (fim + inicio) / 2;
 		int comp;
@@ -74,8 +74,10 @@ public class BuscaBinariaImplementacao{
 		Integer[] array = {-5, -1, 0, 2, 22, 50};
 		Integer chave = 2;
 		
-		System.out.println("BuscaBinaria.buscaIterativa: " + BuscaBinariaImplementacao.buscaIterativa(array, chave));
-		System.out.println("BuscaBinaria.buscaRecursiva: " + BuscaBinariaImplementacao.buscaRecursiva(array, chave));
+		BuscaBinariaImplementacao<Integer> bbInteger = new BuscaBinariaImplementacao<Integer>();
+		
+		System.out.println("BuscaBinaria.buscaIterativa: " + bbInteger.buscaIterativa(array, chave));
+		System.out.println("BuscaBinaria.buscaRecursiva: " + bbInteger.buscaRecursiva(array, chave));
 		System.out.println();
 		
 		//=============== Busca com array de objetos (Comparable) ==========
@@ -90,8 +92,10 @@ public class BuscaBinariaImplementacao{
 		
 		Produto produtoChave = new Produto(4, null, 0); //Busca o produto cujo ID é 4, já que o método compareTo() da classe Produto, compara os IDs.
 		
-		System.out.println("BuscaBinaria.buscaIterativa: " + BuscaBinariaImplementacao.buscaIterativa(arrayProdutos, produtoChave));
-		System.out.println("BuscaBinaria.buscaRecursiva: " + BuscaBinariaImplementacao.buscaRecursiva(arrayProdutos, produtoChave));
+		BuscaBinariaImplementacao<Produto> bbProduto = new BuscaBinariaImplementacao<Produto>();
+		
+		System.out.println("BuscaBinaria.buscaIterativa: " + bbProduto.buscaIterativa(arrayProdutos, produtoChave));
+		System.out.println("BuscaBinaria.buscaRecursiva: " + bbProduto.buscaRecursiva(arrayProdutos, produtoChave));
 		
 	}
 

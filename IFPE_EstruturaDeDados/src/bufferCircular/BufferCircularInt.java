@@ -1,6 +1,6 @@
-package circularbuffer;
+package bufferCircular;
 
-public class BufferCircular {
+public class BufferCircularInt {
 
 	private int indiceEntrada;
 	private int indiceSaida;
@@ -8,7 +8,7 @@ public class BufferCircular {
 
 	public static void main(String[] args) {
 
-		BufferCircular bufferCircular = new BufferCircular(5);
+		BufferCircularInt bufferCircular = new BufferCircularInt(5);
 		bufferCircular.inserir("A");
 		bufferCircular.inserir("B");
 		bufferCircular.inserir("C");
@@ -30,7 +30,7 @@ public class BufferCircular {
 
 	}
 
-	public BufferCircular(int tamanho){
+	public BufferCircularInt(int tamanho){
 		this.dados = new Object[tamanho + 1];
 		this.indiceEntrada = 0;
 		this.indiceSaida = 0;
@@ -40,7 +40,7 @@ public class BufferCircular {
 
 		if(((indiceEntrada + 1) % dados.length) == indiceSaida){
 			System.out.println("Erro ao tentar inserir '"+ novoDado +"', buffer cheio!");
-			return; //Não tem mais espaço para inserir dados. Buffer cheio
+			return; //Não tem mais espaço para inserir dados. Buffer cheio.
 		}
 
 		dados[indiceEntrada] = novoDado;

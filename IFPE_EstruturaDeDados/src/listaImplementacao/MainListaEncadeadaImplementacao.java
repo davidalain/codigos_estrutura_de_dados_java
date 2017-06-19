@@ -1,9 +1,13 @@
-package lista;
+package listaImplementacao;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Scanner;
+
+import array.Problema1;
+import array.Problema2;
+import lista.Numeros;
 
 
 public class MainListaEncadeadaImplementacao {

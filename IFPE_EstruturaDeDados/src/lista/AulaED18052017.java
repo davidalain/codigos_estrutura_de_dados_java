@@ -7,6 +7,11 @@ import java.util.List;
 
 public class AulaED18052017 {
 
+	/**
+	 * Usando Iterator implemente um algoritmo que remova de uma lista todos os caracteres que não são letras minúsculas. 
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		List<Character> lista = new LinkedList<>();
