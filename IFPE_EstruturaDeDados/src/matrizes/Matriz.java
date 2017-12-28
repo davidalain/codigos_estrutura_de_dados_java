@@ -5,6 +5,22 @@ import java.util.Scanner;
 public class Matriz {
 	
 	
+	public static void main(String[] args){
+		
+		int[][] m = new int[3][];
+		m[0] = new int[]{1,2,3};
+		m[1] = new int[]{4,5};
+		m[2] = new int[]{6,7,8,9};
+		
+		for(int lin = 0 ; lin < m.length ; lin++){
+			for(int col = 0 ; col < m[lin].length ; col++){
+				System.out.print(m[lin][col] + "\t");
+			}
+			System.out.println();
+		}
+		
+	}
+	
 	public static void amain(String[] args) {
 		
 		int[][] array;
@@ -27,7 +43,7 @@ public class Matriz {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void _main(String[] args) {
 		
 		int[][] array = new int[5][];
 		array[0] = new int[5];

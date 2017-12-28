@@ -1,4 +1,4 @@
-package lista;
+package lista.implementacao;
 
 public class ListaEncadeada {
 

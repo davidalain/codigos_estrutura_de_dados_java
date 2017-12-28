@@ -1,6 +1,6 @@
 package algoritmosOrdenacao;
 
-public class PaisMedalha implements Comparable<PaisMedalha>{
+public class PaisMedalha /* implements Comparable<PaisMedalha>*/{
 
 	private String nome;
 	private int ouro;
@@ -45,19 +45,19 @@ public class PaisMedalha implements Comparable<PaisMedalha>{
 		return nome + "\t\t" + ouro + "\t" + prata + "\t" + bronze + "\t" + (ouro+prata+bronze);  
 	}
 
-	@Override
-	public int compareTo(PaisMedalha pm) {
-		if(this.ouro > pm.ouro) return -1;
-		if(this.ouro < pm.ouro) return 1;
-		
-		if(this.prata > pm.prata) return -1;
-		if(this.prata < pm.prata) return 1;
-		
-		if(this.bronze > pm.bronze) return -1;
-		if(this.bronze < pm.bronze) return 1;
-		
-		return 0;
-	}
+//	@Override
+//	public int compareTo(PaisMedalha pm) {
+//		if(this.ouro > pm.ouro) return -1;
+//		if(this.ouro < pm.ouro) return 1;
+//		
+//		if(this.prata > pm.prata) return -1;
+//		if(this.prata < pm.prata) return 1;
+//		
+//		if(this.bronze > pm.bronze) return -1;
+//		if(this.bronze < pm.bronze) return 1;
+//		
+//		return 0;
+//	}
 	
 	
 	

@@ -1,4 +1,4 @@
-package ordenacao;
+package algoritmosOrdenacao;
 
 import java.util.Arrays;
 
@@ -8,6 +8,7 @@ public class QuickSort
 	public static void main(String[] args)
 	{
 		Integer[] a = {2, 6, 3, 5, 1, -1, 0};
+		System.out.println(Arrays.toString(a));
 		sort(a);
 		System.out.println(Arrays.toString(a));
 	}
@@ -39,9 +40,7 @@ public class QuickSort
 				f--;
 			else
 			{
-				Comparable troca = array[i];
-				array[i] = array[f];
-				array[f] = troca;
+				troca(array, i, f);
 				i++;
 				f--;
 			}
@@ -49,5 +48,11 @@ public class QuickSort
 		array[inicio] = array[f];
 		array[f] = pivo;
 		return f;
+	}
+
+	private static void troca(Comparable[] array, int indice1, int indice2){
+		Comparable temp = array[indice1];
+		array[indice1] = array[indice2];
+		array[indice2] = temp;
 	}
 }

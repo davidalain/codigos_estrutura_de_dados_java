@@ -9,7 +9,6 @@ public class RotacaoMatrizes {
 		
 		for(int  i = 0 ; i < m.length ; i++){
 			for(int j = 0 ; j < m[0].length ; j++){
-//				mOut[m[0].length - j - 1][i] = m[i][j];
 				mOut[j][m.length - 1 - i] = m[i][j];
 			}
 		}

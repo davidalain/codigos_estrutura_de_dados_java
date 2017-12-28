@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class ComparaDesempenhoLinkedListArrayList {
 
-	public static void main3(String[] args) {
+	public static void main(String[] args) {
 
 		System.out.println("Rodando...");
 		System.out.println();
@@ -16,31 +16,11 @@ public class ComparaDesempenhoLinkedListArrayList {
 			avaliacaoDesempenho(quantidadeElementos);
 		}
 
-		//		System.out.println("======== Rodada " + rodada++ + " ==========");
-		//		quantidadeElementos *= 10;
-		//		avaliacaoDesempenho(quantidadeElementos);
-		//
-		//		System.out.println("======== Rodada " + rodada++ + " ==========");
-		//		quantidadeElementos *= 10;
-		//		avaliacaoDesempenho(quantidadeElementos);
-		//
-		//		System.out.println("======== Rodada " + rodada++ + " ==========");
-		//		quantidadeElementos *= 10;
-		//		avaliacaoDesempenho(quantidadeElementos);
-		//
-		//		System.out.println("======== Rodada " + rodada++ + " ==========");
-		//		quantidadeElementos *= 10;
-		//		avaliacaoDesempenho(quantidadeElementos);
-		//
-		//		System.out.println("======== Rodada " + rodada++ + " ==========");
-		//		quantidadeElementos *= 10;
-		//		avaliacaoDesempenho(quantidadeElementos);
-
 		System.out.println("Terminou!");
 
 	}
 
-	public static void avaliacaoDesempenho(int quantidadeElementos){
+	public static void avaliacaoDesempenho(int quantidadeElementos){ 
 
 		long ini, end;
 

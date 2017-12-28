@@ -1,4 +1,4 @@
-package ordenacao;
+package algoritmosOrdenacao;
 
 import java.util.Arrays;
 

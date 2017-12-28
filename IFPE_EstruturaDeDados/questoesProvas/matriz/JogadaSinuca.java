@@ -4,10 +4,10 @@ public class JogadaSinuca {
 
 	public static void main(String[] args) {
 		
-		int[] posicao = {0,0};
-		int angulo = 135;
-		int deslocamento = 29;
-		int[] dimensaoMesa = {16, 16};
+		int[] posicao = {3,3};
+		int angulo = 225;
+		int deslocamento = 512;
+		int[] dimensaoMesa = {20, 10};
 		
 		int[] posicaoResultante = jogada(posicao, angulo, deslocamento, dimensaoMesa);
 		System.out.println("Posição final: linha="+posicaoResultante[0]+", coluna="+posicaoResultante[1]);

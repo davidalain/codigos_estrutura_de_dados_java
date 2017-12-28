@@ -1,12 +1,12 @@
-package ordenacao;
+package algoritmosOrdenacao;
 
-public class Carro implements Comparable<Carro>{
+public class Carro2 implements Comparable<Carro2>{
 
 	private String modelo;
 	private int nPortas;
 	private int potencia;
 	
-	public Carro(String modelo, int nPortas, int potencia) {
+	public Carro2(String modelo, int nPortas, int potencia) {
 		super();
 		this.modelo = modelo;
 		this.nPortas = nPortas;
@@ -31,7 +31,7 @@ public class Carro implements Comparable<Carro>{
 		this.potencia = potencia;
 	}
 	@Override
-	public int compareTo(Carro carro) {
+	public int compareTo(Carro2 carro) {
 		int m = this.modelo.compareTo(carro.modelo);
 		
 		if(m != 0)

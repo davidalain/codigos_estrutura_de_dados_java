@@ -1,4 +1,4 @@
-package atividade1;
+package generics;
 
 
 public class Casa {

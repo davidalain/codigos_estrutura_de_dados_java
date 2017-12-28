@@ -2,23 +2,25 @@ package algoritmosOrdenacao;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
-public class OrdenacaoMedalhas {
+public class OrdenacaoMedalhasMain {
 
 	public static void embaralhar(List<PaisMedalha> lista){
-
-		Random r = new Random();
-		for(int i = 0 ; i < lista.size() ; i++){
-
-			int iRandom = r.nextInt(lista.size());
-			PaisMedalha p1 = lista.get(i);
-			PaisMedalha p2 = lista.get(iRandom);
-
-			lista.set(i, p2);
-			lista.set(iRandom, p1);
-		}
+		Collections.shuffle(lista);
+//
+//		Random r = new Random();
+//		for(int i = 0 ; i < lista.size() ; i++){
+//
+//			int iRandom = r.nextInt(lista.size());
+//			PaisMedalha p1 = lista.get(i);
+//			PaisMedalha p2 = lista.get(iRandom);
+//
+//			lista.set(i, p2);
+//			lista.set(iRandom, p1);
+//		}
 	}
 
 	public static void embaralhar(PaisMedalha[] array){
@@ -72,6 +74,7 @@ public class OrdenacaoMedalhas {
 			System.out.println(""+ posicao++ +"º\t"+p.toString());
 		}
 
+//		embaralhar(lista);
 		embaralhar(paises); //Para embaralhar uma lista usando a própria API Java use Collections.shuffle(paises);
 		System.out.println();
 		System.out.println("== Depois de embaralhar ==");
@@ -81,8 +84,30 @@ public class OrdenacaoMedalhas {
 			System.out.println(""+ posicao++ +"º\t"+p.toString());
 		}
 
-		//Collections.sort(paises); //Ordenar lista
-		Arrays.sort(paises, new ComparadorPaisMedalha()); //Ordenar array
+//		Collections.sort(lista); //Ordenar lista
+//		Arrays.sort(paises, new ComparadorPaisMedalha()); //Ordenar array
+		
+		Arrays.sort(paises, new Comparator<PaisMedalha>() {
+
+			@Override
+			public int compare(PaisMedalha o1, PaisMedalha o2) {
+				if(o1.getOuro() > o2.getOuro()) return -1;
+				if(o1.getOuro() < o2.getOuro()) return 1;
+				
+				if(o1.getPrata() > o2.getPrata()) return -1;
+				if(o1.getPrata() < o2.getPrata()) return 1;
+				
+				if(o1.getBronze() > o2.getBronze()) return -1;
+				if(o1.getBronze() < o2.getBronze()) return 1;
+				
+				return 0;
+			}
+			
+		});
+		
+		
+		
+		
 		System.out.println();
 		System.out.println("== Depois de ordenar ==");
 		System.out.println("Posição\tPais\t\t\tOuro\tPrata\tBronze\tTotal");
