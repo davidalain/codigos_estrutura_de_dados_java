@@ -1,6 +1,6 @@
 package interfaceJava;
 
-public class Pentagono extends Poligono implements PoligonoNomeavel{
+public class Pentagono extends Poligono implements IPoligono{
 
 	public Pentagono() {
 		super(5);
@@ -11,5 +11,10 @@ public class Pentagono extends Poligono implements PoligonoNomeavel{
 		return "Pentágono";
 	}
 
-}
+//	@Override
+//	public String nomeProximoPoligono() {
+//		return "Hexágono";
+//	}
+	
 
+}

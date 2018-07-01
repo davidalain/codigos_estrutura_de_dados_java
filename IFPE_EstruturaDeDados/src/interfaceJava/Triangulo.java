@@ -1,6 +1,6 @@
 package interfaceJava;
 
-public class Triangulo extends Poligono implements PoligonoNomeavel{
+public class Triangulo extends Poligono implements IPoligono{
 	
 	public Triangulo(){
 		super(3);
@@ -12,5 +12,3 @@ public class Triangulo extends Poligono implements PoligonoNomeavel{
 	
 
 }
-
-

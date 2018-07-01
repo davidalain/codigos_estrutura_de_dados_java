@@ -10,7 +10,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		PoligonoNomeavel p = new Quadrado();
+		IPoligono p = new Triangulo();
 		System.out.println(p.getNome());
 
 	}

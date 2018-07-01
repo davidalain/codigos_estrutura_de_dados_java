@@ -3,54 +3,66 @@ package generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAOPessoa implements DAO<Pessoa>{
+public class DaoPessoa implements DAO<Pessoa>{
 
-	ArrayList<Pessoa> pessoas = new ArrayList<>();
-
-	@Override
-	public Pessoa inserir(Pessoa e) {
-		if(pegar(e) == null) {
-			this.pessoas.add(e);
-			return e;
-		}
-		return null;
+	private List<Pessoa> lista;
+	
+	public DaoPessoa() {
+		this.lista = new ArrayList<>();
 	}
-
+	
 	@Override
-	public Pessoa remover(Pessoa e) {
-		for(int i = 0 ; i < this.pessoas.size() ; i++) {
-			if(this.pessoas.get(i).equals(e)) {
-				return this.pessoas.remove(i);
-			}
-		}
-		return null;
+	public void inserir(Pessoa elemento) {
+		lista.add(elemento);
 	}
 
 	@Override
 	public Pessoa pegar(Pessoa e) {
-		for(Pessoa p : this.pessoas) { 
-			if(p.equals(e)) {
+		
+		/** usando for **/
+//		for(int i = 0 ; i < lista.size() ; i++) {
+//			Pessoa p = lista.get(i);
+//			
+//			if(p.equals(e)) {
+//				return p;
+//			}
+//		}
+		
+		/** usando for-each **/
+		for(Pessoa p : lista) {
+			if(p.equals(e))
 				return p;
-			}
 		}
+		
 		return null;
 	}
 
 	@Override
-	public Pessoa atualizar(Pessoa e) {
-		for(int i = 0 ; i < this.pessoas.size() ; i++) {
-			if(this.pessoas.get(i).equals(e)) {
-				return this.pessoas.set(i, e);
+	public void atualizar(Pessoa e) {
+		
+		for(int i = 0 ; i < lista.size() ; i++) {
+			if(lista.get(i).equals(e)) {
+				lista.set(i, e);
+				break;
 			}
 		}
-		return null;
+		
 	}
 
 	@Override
-	public List<Pessoa> listarTodos() {
-		return this.pessoas;
+	public Pessoa deletar(Pessoa e) {
+		
+		for(int i = 0 ; i < lista.size() ; i++) {
+			if(lista.get(i).equals(e)) {
+				return lista.remove(i);
+			}
+		}
+		
+		return null;
 	}
 
+	
 
-
+	
+	
 }

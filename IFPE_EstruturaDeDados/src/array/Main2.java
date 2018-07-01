@@ -1,6 +1,6 @@
 package array;
 
-import atividade1.Casa;
+//import atividade1.Casa;
 
 public class Main2 {
 	
@@ -82,16 +82,15 @@ public class Main2 {
 		return listaInvertidos;
 	}
 	
-//	static int ocorrencia(Casa[] lista, Casa c){
-//		
-//		int quantidade = 0;
-//		for(int i = 0 ; i < lista.length ; i++){
-//			if(lista[i].equals(c)){
-//				quantidade++;
-//			}
-//		}
-//		return quantidade;
-//		
-//	}
+	static int ocorrencia(Casa[] lista, Casa c){
+		
+		int quantidade = 0;
+		for(int i = 0 ; i < lista.length ; i++){
+			if(lista[i].equals(c)){
+				quantidade++;
+			}
+		}
+		return quantidade;
+	}
 	
 }

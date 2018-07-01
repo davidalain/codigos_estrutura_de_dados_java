@@ -5,18 +5,17 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import algoritmosOrdenacao.Produto;
 
 public class Main {
 	
 	public static void main(String[] args) {
 
 		List<Produto> minhaLista = new ArrayList<Produto>();
-		minhaLista.add(new Produto("arroz", "12345", 50.0));
-		minhaLista.add(new Produto("feijão", "123456", 49.90));
-		minhaLista.add(new Produto("arroz2", "1234567", 5.0));
+		minhaLista.add(new Produto("arroz", "12345", 50.0, 1.0));
+		minhaLista.add(new Produto("feijão", "123456", 49.90, 1.0));
+		minhaLista.add(new Produto("arroz2", "1234567", 5.0, 1.0));
 
-		Produto chave = new Produto("", "1234567", 5.0);
+		Produto chave = new Produto("", "1234567", 5.0, 0.0);
 		ComparaProdutoPrecoCrescente precoCresc = new ComparaProdutoPrecoCrescente();
 		
 		long tempoInicial = System.currentTimeMillis();
@@ -39,11 +38,11 @@ public class Main {
 	public static void main4(String[] args) {
 
 		Produto[] meuArray = new Produto[3];
-		meuArray[0] = new Produto("arroz", "12345", 50.0);
-		meuArray[1] = new Produto("feijão", "12345", 49.90);
-		meuArray[2] = new Produto("arroz", "12345", 5.0);
+		meuArray[0] = new Produto("arroz", "12345", 50.0, 1.0);
+		meuArray[1] = new Produto("feijão", "12345", 49.90, 1.0);
+		meuArray[2] = new Produto("arroz", "12345", 5.0, 1.0);
 
-		Produto chave = new Produto("arroz", "0", 0.0);
+		Produto chave = new Produto("arroz", "0", 0.0, 0.0);
 		ComparaProdutoNomeCrescente nomeCresc = new ComparaProdutoNomeCrescente();
 
 		Arrays.sort(meuArray, nomeCresc); //ordena o array antes
@@ -59,9 +58,9 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		List<Produto> minhaLista = new ArrayList<Produto>();
-		minhaLista.add(new Produto("arroz", "12345", 50.0));
-		minhaLista.add(new Produto("feijão", "12345", 49.90));
-		minhaLista.add(new Produto("arroz", "12345", 5.0));
+		minhaLista.add(new Produto("arroz", "12345", 50.0, 1.0));
+		minhaLista.add(new Produto("feijão", "12345", 49.90, 1.0));
+		minhaLista.add(new Produto("arroz", "12345", 5.0, 1.0));
 
 		ComparaProdutoNomeCrescente nomeCresc = new ComparaProdutoNomeCrescente();
 		ComparaProdutoNomeDecrescente nomeDec = new ComparaProdutoNomeDecrescente();
@@ -98,9 +97,9 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		Produto[] meuArray = new Produto[3];
-		meuArray[0] = new Produto("arroz", "12345", 50.0);
-		meuArray[1] = new Produto("feijão", "12345", 49.90);
-		meuArray[2] = new Produto("arroz", "12345", 5.0);
+		meuArray[0] = new Produto("arroz", "12345", 50.0, 1.0);
+		meuArray[1] = new Produto("feijão", "12345", 49.90, 1.0);
+		meuArray[2] = new Produto("arroz", "12345", 5.0, 1.0);
 
 		ComparaProdutoNomeCrescente nomeCresc = new ComparaProdutoNomeCrescente();
 		ComparaProdutoNomeDecrescente nomeDec = new ComparaProdutoNomeDecrescente();
