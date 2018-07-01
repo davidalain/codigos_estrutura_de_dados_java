@@ -28,6 +28,12 @@ public class Carro implements Comparable<Carro>{
 //		return this.chassi.compareTo(c.chassi);
 //	}
 	
+	public Carro(int nPortas, String chassi) {
+		super();
+		this.nPortas = nPortas;
+		this.chassi = chassi;
+	}
+	
 	public Carro(int comprimento, int nPortas, String chassi) {
 		super();
 		this.comprimento = comprimento;

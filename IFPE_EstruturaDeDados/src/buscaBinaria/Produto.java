@@ -1,7 +1,8 @@
 package buscaBinaria;
 
-public class Produto implements Comparable{
+public class Produto implements Comparable<Produto>{
 
+	private Marca marca;
 	private int id;
 	private String nome;
 	private double preco;
@@ -11,6 +12,22 @@ public class Produto implements Comparable{
 		this.id = id;
 		this.nome = nome;
 		this.preco = preco;
+	}
+	
+	public Produto(Marca marca, int id, String nome, double preco) {
+		super();
+		this.marca = marca;
+		this.id = id;
+		this.nome = nome;
+		this.preco = preco;
+	}
+	
+	public Marca getMarca() {
+		return marca;
+	}
+
+	public void setMarca(Marca marca) {
+		this.marca = marca;
 	}
 
 	public int getId() {
@@ -41,22 +58,17 @@ public class Produto implements Comparable{
 		return "Produto = {id=" + id + ", nome=" + nome + ", preco=" + preco + "}";
 	}
 
-	/**
-	 * Compara produtos pelo ID
-	 */
-	public int compareTo(Object o) {
+	@Override
+	public int compareTo(Produto o) {
 
-		Produto p = (Produto) o;
-
-		if(id < p.id)
+		if(this.id < o.id)
 			return -1;
 
-		if(id > p.id)
+		if(this.id > o.id)
 			return 1;
 
 		return 0; 
 	}
-
 
 
 }

@@ -1,5 +1,7 @@
 package array;
 
+import equals.Casa;
+
 //import atividade1.Casa;
 
 public class Main2 {

@@ -5,15 +5,9 @@ import java.util.List;
 public class DAOCasa implements DAO<Casa> {
 
 	@Override
-	public Casa inserir(Casa e) {
+	public void inserir(Casa e) {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Casa remover(Casa e) {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
@@ -23,7 +17,13 @@ public class DAOCasa implements DAO<Casa> {
 	}
 
 	@Override
-	public Casa atualizar(Casa e) {
+	public void atualizar(Casa e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Casa deletar(Casa e) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -33,5 +33,7 @@ public class DAOCasa implements DAO<Casa> {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 	
 }

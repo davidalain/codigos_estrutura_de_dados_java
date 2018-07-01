@@ -10,10 +10,7 @@ public class E {
 		m[1] = new int[]{4,5};
 		m[2] = new int[]{6,7,8};
 		
-		
-		
-		
-		a[0]++;
+		m[0][0]++;
 		
 	}
 	

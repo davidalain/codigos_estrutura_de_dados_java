@@ -3,11 +3,11 @@ package generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DaoPessoa implements DAO<Pessoa>{
+public class DAOPessoa implements DAO<Pessoa>{
 
 	private List<Pessoa> lista;
 	
-	public DaoPessoa() {
+	public DAOPessoa() {
 		this.lista = new ArrayList<>();
 	}
 	
@@ -61,7 +61,10 @@ public class DaoPessoa implements DAO<Pessoa>{
 		return null;
 	}
 
-	
+	@Override
+	public List<Pessoa> listarTodos() {
+		return lista;
+	}
 
 	
 	

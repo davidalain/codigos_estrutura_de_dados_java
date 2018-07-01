@@ -4,7 +4,7 @@ public class MainDAO {
 	
 	public static void main(String[] args) {
 		
-		DaoPessoa dao = new DaoPessoa();
+		DAOPessoa dao = new DAOPessoa();
 		
 		Pessoa p1 = new Pessoa("David", "00", "david", "123");
 		

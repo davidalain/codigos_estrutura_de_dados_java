@@ -19,7 +19,7 @@ public class Problema1 {
 	}
 	
 	
-	static void mostrarTabela(int[][] tabela){
+	public static void mostrarTabela(int[][] tabela){
 		
 		System.out.print("\t");
 		

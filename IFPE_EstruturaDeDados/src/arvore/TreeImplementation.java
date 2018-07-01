@@ -4,6 +4,40 @@ import java.security.InvalidParameterException;
 import java.util.List;
 
 public class TreeImplementation<K,V> {
+	
+	class Node<K,V>{
+
+		K key;
+		V value;
+		List<Node<K,V>> children;
+		Node<K,V> parent;
+
+		public Node(K key_, V value_, Node<K,V> parent_){ 
+			
+			if(key_ == null)
+				throw new InvalidParameterException();
+			if(value_ == null)
+				throw new InvalidParameterException();
+			
+			key = key_;
+			value = value_;
+			children = null;
+			parent = parent_;
+		}
+
+		public void remove(){
+
+			this.key = null;
+			this.value = null;
+			this.parent = null;
+
+			for(Node<K,V> child : children){
+
+			}
+
+		}
+
+	}
 
 	private Node<K,V> root = null;
 
@@ -82,38 +116,4 @@ public class TreeImplementation<K,V> {
 
 }
 
-
-class Node<K,V>{
-
-	K key;
-	V value;
-	List<Node<K,V>> children;
-	Node<K,V> parent;
-
-	public Node(K key_, V value_, Node<K,V> parent_){ 
-		
-		if(key_ == null)
-			throw new InvalidParameterException();
-		if(value_ == null)
-			throw new InvalidParameterException();
-		
-		key = key_;
-		value = value_;
-		children = null;
-		parent = parent_;
-	}
-
-	public void remove(){
-
-		this.key = null;
-		this.value = null;
-		this.parent = null;
-
-		for(Node<K,V> child : children){
-
-		}
-
-	}
-
-}
 
