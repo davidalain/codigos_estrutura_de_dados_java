@@ -10,8 +10,9 @@ import java.util.Map;
 
 public class ClassificacaoGeralCopa {
 
-	private Map<Grupo,ClassificacaoGrupo> mapaGrupoClassificacaoGrupo;
-	private Map<Selecao,Grupo> mapaSelecaoGrupo;
+	private Map<Grupo, ClassificacaoGrupo> mapaGrupoClassificacaoGrupo;
+	private Map<Selecao, Grupo> mapaSelecaoGrupo;
+	private Map<Selecao, ResultadoSelecao> mapaSelecaoResultado = new HashMap<Selecao, ResultadoSelecao>();
 	
 	public int questaoA(Selecao selecao) {
 		
@@ -78,8 +79,6 @@ public class ClassificacaoGeralCopa {
 	
 	public void questaoD(Selecao selecao) {
 		
-		Map<Selecao, ResultadoSelecao> mapa = new HashMap<Selecao, ResultadoSelecao>();
-		
 		Grupo grupo = mapaSelecaoGrupo.get(selecao);
 		ClassificacaoGrupo classificacaoGrupo = mapaGrupoClassificacaoGrupo.get(grupo);
 		
@@ -88,7 +87,7 @@ public class ClassificacaoGeralCopa {
 			
 			final ResultadoSelecao resultadoSelecao = new ResultadoSelecao();
 			resultadoSelecao.setSelecao(s);
-			mapa.put(s, resultadoSelecao);
+			mapaSelecaoResultado.put(s, resultadoSelecao);
 		}
 		
 		//Itera por todos os ResultadoJogo do grupo para calcular os valores de ResultadoJogo
@@ -103,8 +102,8 @@ public class ClassificacaoGeralCopa {
 			int golsSelecao2 = resultadoJogo.getTuplaSelecaoGols2().getGols();
 			
 			//Pega os ResultadoSelecao do mapa
-			ResultadoSelecao resultadoSelecao1 = mapa.get(s1);
-			ResultadoSelecao resultadoSelecao2 = mapa.get(s2);
+			ResultadoSelecao resultadoSelecao1 = mapaSelecaoResultado.get(s1);
+			ResultadoSelecao resultadoSelecao2 = mapaSelecaoResultado.get(s2);
 			
 			//Seleção1 vence Seleção2
 			if(golsSelecao1 > golsSelecao2) {
@@ -156,7 +155,7 @@ public class ClassificacaoGeralCopa {
 		}
 		
 		//Pega a lista de resultados para ordenar
-		List<ResultadoSelecao> listaResultados = new ArrayList<>(mapa.values());
+		List<ResultadoSelecao> listaResultados = new ArrayList<>(mapaSelecaoResultado.values());
 		Collections.sort(listaResultados, new Comparator<ResultadoSelecao>() {
 
 			@Override
